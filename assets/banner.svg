@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+<title id="title">Arya — Ideas worth building.</title>
+<desc id="desc">Midnight-blue banner with mint orbital lines. AI systems, creative tools, experiments.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1120"/><stop offset="1" stop-color="#102d35"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#57e3b6" stop-opacity=".16"/><stop offset="1" stop-color="#57e3b6" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#a3c3c5" opacity=".13"/></pattern>
+</defs>
+<rect width="1200" height="380" rx="20" fill="url(#bg)"/>
+<rect width="1200" height="380" rx="20" fill="url(#grid)"/>
+<circle cx="960" cy="185" r="220" fill="url(#glow)"/>
+<path d="M40 70V40h30M1130 40h30v30M40 310v30h30M1130 340h30v-30" fill="none" stroke="#5ee3b6" stroke-opacity=".45" stroke-width="2"/>
+<g font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+  <circle cx="75" cy="76" r="4" fill="#5ee3b6"/>
+  <text x="90" y="81" font-size="13" fill="#a6c4cc" letter-spacing="2">ARYASENTRY / THE BUILDER'S LAB</text>
+</g>
+<text x="69" y="188" font-family="Arial,Helvetica,sans-serif" font-size="104" font-weight="800" letter-spacing="-5" fill="#f2f7fa">ARYA<tspan fill="#5ee3b6">.</tspan></text>
+<text x="74" y="241" font-family="Arial,Helvetica,sans-serif" font-size="32" fill="#d1dee6">Ideas worth building.</text>
+<path d="M75 272h535" stroke="#38505a"/>
+<text x="75" y="306" font-family="'SFMono-Regular',Consolas,monospace" font-size="13" letter-spacing="1.5" fill="#94b2c1">AI SYSTEMS / CREATIVE TOOLS / EXPERIMENTS</text>
+<g transform="translate(958 185)" fill="none">
+  <circle r="113" stroke="#49717a" stroke-opacity=".6" stroke-dasharray="3 8"/>
+  <circle r="78" stroke="#49717a" stroke-opacity=".4"/>
+  <ellipse rx="149" ry="55" transform="rotate(-34)" stroke="#5ee3b6" stroke-width="2"/>
+  <ellipse rx="149" ry="55" transform="rotate(34)" stroke="#7ca5f6" stroke-width="1.5" stroke-opacity=".8"/>
+  <path d="M-45 -21l-23 21 23 21M45 -21l23 21-23 21M13 -34l-26 68" stroke="#e5f8f1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="124" cy="-73" r="7" fill="#5ee3b6"/>
+  <circle cx="-121" cy="-75" r="5" fill="#7ca5f6"/>
+  <circle cx="49" cy="102" r="5" fill="#f4bc78"/>
+</g>
+<text x="958" y="344" text-anchor="middle" font-family="Consolas,monospace" font-size="12" letter-spacing="3" fill="#8faeb9">EXPLORE. BUILD. ITERATE.</text>
+</svg>
