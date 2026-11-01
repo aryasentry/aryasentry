@@ -15,22 +15,52 @@ concurrency: koi
 jobs:
   koi:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
-      - uses: yalongwastaken/git-koi@v1.0.2
+      - name: Check out pinned git-koi renderer (v1.0.2)
+        uses: actions/checkout@v7
         with:
-          login: aryasentry
-          body: white
-          output-dir: koi
-      - name: Commit the koi if it changed
+          repository: yalongwastaken/git-koi
+          ref: 7305e9b1fadee6f43d3b4fa543a25d4cde79856e
+          path: .koi-renderer
+          persist-credentials: false
+      - name: Give the fish a larger minimum body, keeping the canvas unchanged
         shell: bash
         run: |
-          git add koi/koi.gif
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('.koi-renderer/src/render.rs')
+          source = path.read_text()
+          old = 'const MIN_BODY_LENGTH_PIXELS: f64 = 37.5;'
+          new = 'const MIN_BODY_LENGTH_PIXELS: f64 = 125.0;'
+          assert source.count(old) == 1, 'Upstream anatomy changed; review the sizing patch'
+          path.write_text(source.replace(old, new))
+          PY
+          cargo build --release --locked --manifest-path .koi-renderer/Cargo.toml
+      - name: Collect real public activity once
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: .koi-renderer/target/release/git-koi collect aryasentry --output "$RUNNER_TEMP/koi-snapshot.json"
+      - name: Render three colour variants with the same real activity
+        shell: bash
+        run: |
+          mkdir -p koi
+          for body in white gold asagi; do
+            .koi-renderer/target/release/git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir "$RUNNER_TEMP/koi-$body" --body "$body"
+            cp "$RUNNER_TEMP/koi-$body/koi.gif" "koi/$body.gif"
+          done
+          cp koi/white.gif koi/koi.gif
+      - name: Commit changed fish
+        shell: bash
+        run: |
+          git add koi/koi.gif koi/white.gif koi/gold.gif koi/asagi.gif
           if git diff --cached --quiet; then
-            echo "The koi is unchanged; nothing to commit."
+            echo "The koi are unchanged; nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit --quiet --message "koi: draw the day's koi"
+          git commit --quiet --message "koi: refresh the three-fish pond"
+          git pull --rebase origin main
           git push --quiet
