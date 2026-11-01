@@ -42,25 +42,22 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: .koi-renderer/target/release/git-koi collect aryasentry --output "$RUNNER_TEMP/koi-snapshot.json"
-      - name: Render three colour variants with the same real activity
+      - name: Render one large-bodied koi
         shell: bash
         run: |
           mkdir -p koi
-          for body in white gold asagi; do
-            .koi-renderer/target/release/git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir "$RUNNER_TEMP/koi-$body" --body "$body"
-            cp "$RUNNER_TEMP/koi-$body/koi.gif" "koi/$body.gif"
-          done
-          cp koi/white.gif koi/koi.gif
-      - name: Commit changed fish
+          .koi-renderer/target/release/git-koi render "$RUNNER_TEMP/koi-snapshot.json" --output-dir "$RUNNER_TEMP/koi-white" --body white
+          cp "$RUNNER_TEMP/koi-white/koi.gif" koi/koi.gif
+      - name: Commit changed koi
         shell: bash
         run: |
-          git add koi/koi.gif koi/white.gif koi/gold.gif koi/asagi.gif
+          git add koi/koi.gif
           if git diff --cached --quiet; then
-            echo "The koi are unchanged; nothing to commit."
+            echo "The koi is unchanged; nothing to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit --quiet --message "koi: refresh the three-fish pond"
+          git commit --quiet --message "koi: refresh the profile koi"
           git pull --rebase origin main
           git push --quiet
