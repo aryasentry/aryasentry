@@ -16,16 +16,7 @@
 ---
 
 <p align="center">
-  <b>On my radar</b><br />
-  AI agents &amp; retrieval · Local creative tools · Reproducible experiments
-</p>
-
-<p align="center">
-  <img src="koi/white.gif" width="280" alt="White koi swimming" /><img src="koi/gold.gif" width="280" alt="Gold koi swimming" /><img src="koi/asagi.gif" width="280" alt="Blue-grey Asagi koi swimming" />
-</p>
-<p align="center">
-  <b>Three fish. One very productive pond.</b><br />
-  <sub>Colour variants driven by my public GitHub activity, refreshed daily.<br />Custom larger bodies · powered by <a href="https://github.com/yalongwastaken/git-koi">git-koi</a>.</sub>
+  <img src="koi/koi.gif" width="280" alt="Animated koi swimming" />
 </p>
 
 ### 01 / Things I've been building
