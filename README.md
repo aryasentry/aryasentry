@@ -15,22 +15,18 @@
 
 ---
 
-<table>
-<tr>
-<td width="40%" valign="middle">
-<b>On my radar</b><br /><br />
-↳ AI agents and retrieval systems<br />
-↳ Tools that keep your work on your machine<br />
-↳ Experiments you can inspect and reproduce<br /><br />
-<code>curiosity → prototype → test → iterate</code>
-</td>
-<td width="60%" align="center" valign="middle">
-<img src="https://raw.githubusercontent.com/aryasentry/aryasentry/main/koi/koi.gif" width="512" alt="Arya's animated koi, generated from public GitHub activity" /><br />
-<b>A little life between commits.</b><br />
-<sub>This koi grows and changes with my public activity.<br />Redrawn daily with <a href="https://github.com/yalongwastaken/git-koi">git-koi</a>.</sub>
-</td>
-</tr>
-</table>
+<p align="center">
+  <b>On my radar</b><br />
+  AI agents &amp; retrieval · Local creative tools · Reproducible experiments
+</p>
+
+<p align="center">
+  <img src="koi/white.gif" width="280" alt="White koi swimming" /><img src="koi/gold.gif" width="280" alt="Gold koi swimming" /><img src="koi/asagi.gif" width="280" alt="Blue-grey Asagi koi swimming" />
+</p>
+<p align="center">
+  <b>Three fish. One very productive pond.</b><br />
+  <sub>Colour variants driven by my public GitHub activity, refreshed daily.<br />Custom larger bodies · powered by <a href="https://github.com/yalongwastaken/git-koi">git-koi</a>.</sub>
+</p>
 
 ### 01 / Things I've been building
 
