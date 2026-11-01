@@ -15,30 +15,24 @@
 
 ---
 
-### 01 / The person behind the commits
-
-I like taking an idea far enough that you can actually use it: edit a video, revisit a room in 3D, explore a dataset, or run an experiment yourself.
-
-My projects sit somewhere between **AI systems**, **creative tools**, and **applied research**. Lately, that has meant local video workflows, photo reconstruction, weather analytics, and constrained optimization.
-
 <table>
 <tr>
-<td width="65%" valign="middle">
+<td width="40%" valign="middle">
 <b>On my radar</b><br /><br />
 ↳ AI agents and retrieval systems<br />
 ↳ Tools that keep your work on your machine<br />
 ↳ Experiments you can inspect and reproduce<br /><br />
 <code>curiosity → prototype → test → iterate</code>
 </td>
-<td width="35%" align="center" valign="middle">
-<img src="https://raw.githubusercontent.com/aryasentry/aryasentry/main/koi/koi.gif" width="256" alt="Arya's animated koi, generated from public GitHub activity" /><br />
+<td width="60%" align="center" valign="middle">
+<img src="https://raw.githubusercontent.com/aryasentry/aryasentry/main/koi/koi.gif" width="512" alt="Arya's animated koi, generated from public GitHub activity" /><br />
 <b>A little life between commits.</b><br />
 <sub>This koi grows and changes with my public activity.<br />Redrawn daily with <a href="https://github.com/yalongwastaken/git-koi">git-koi</a>.</sub>
 </td>
 </tr>
 </table>
 
-### 02 / Things I've been building
+### 01 / Things I've been building
 
 <table>
 <tr>
@@ -85,7 +79,7 @@ My projects sit somewhere between **AI systems**, **creative tools**, and **appl
 
 </details>
 
-### 03 / My workbench
+### 02 / My workbench
 
 | Layer | Tools I build with |
 | :--- | :--- |
@@ -95,7 +89,7 @@ My projects sit somewhere between **AI systems**, **creative tools**, and **appl
 | **Data & experiments** | pandas · NumPy · scikit-learn · Qiskit Aer · CVXPY |
 | **Creative computing** | FFmpeg · WebGL · COLMAP · Gaussian splatting |
 
-### 04 / Let's make something interesting
+### 03 / Let's make something interesting
 
 I'm interested in collaborating on **AI agents**, **retrieval systems**, and **creative software**. If you're exploring something similar, I'd love to compare notes.
 
